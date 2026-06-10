@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "global-pdf-editor"
+description = "A lightweight PDF form filler and annotator"
+version = "1.0.0"
+authors = [
+    {name = "Swarnabh", email = "swarnabh@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Office/Business :: Office Suites",
+    "Topic :: Text Processing :: Editing",
+    "Topic :: Utilities",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: Microsoft :: Windows",
+]
+
+dependencies = [
+    "PySide6>=6.5.0",
+    "PyMuPDF>=1.23.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/username/global-pdf-editor"
+"Bug Reports" = "https://github.com/username/global-pdf-editor/issues"
+"Source" = "https://github.com/username/global-pdf-editor"
+
+[project.scripts]
+global-pdf-editor = "app_master:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["test_*", "*_test", "*_clean"]
